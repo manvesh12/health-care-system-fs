@@ -1,174 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Portal | Find Your Next Role</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>JobPortal | Find Your Next Role</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="topbar">
-        <div class="logo">
-            Job Portal
-        </div>
-        <nav class="nav-links">
-            <a href="#jobs">Jobs</a>
-            <a href="#categories">Categories</a>
-            <a href="#about">About</a>
-        </nav>
-        <div class="actions">
-            <button class="ghost">Login</button>
-            <button class="solid">Sign Up</button>
-        </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <p class="pill">Inspired by simple job boards</p>
-                <h1>Find a job that fits your life.</h1>
-                <p class="sub">Browse fresh listings from companies that care about people, not just positions.</p>
-                <form class="search-bar">
-                    <input type="text" placeholder="Job title or keyword">
-                    <input type="text" placeholder="Location">
-                    <button type="button">Search</button>
-                </form>
-                <div class="tags">
-                    <span>Remote</span>
-                    <span>Marketing</span>
-                    <span>Engineering</span>
-                    <span>Design</span>
-                </div>
-            </div>
-            <div class="hero-card">
-                <h3>Popular searches</h3>
-                <ul>
-                    <li>Product Designer • Remote</li>
-                    <li>Front End Developer • Bangalore</li>
-                    <li>Data Analyst • Delhi NCR</li>
-                    <li>HR Executive • Mumbai</li>
-                </ul>
-            </div>
-        </section>
+<header class="topbar">
+  <div class="logo">JobPortal</div>
 
-        <section class="stats" id="about">
-            <div>
-                <strong>12k+</strong>
-                <p>Active openings</p>
-            </div>
-            <div>
-                <strong>2.5k</strong>
-                <p>Companies hiring</p>
-            </div>
-            <div>
-                <strong>98%</strong>
-                <p>Profiles verified</p>
-            </div>
-        </section>
+  <nav>
+    <a href="#">Jobs</a>
+    <a href="#">Categories</a>
+    <a href="#">About</a>
+  </nav>
 
-        <section class="jobs" id="jobs">
-            <div class="section-head">
-                <div>
-                    <p class="pill">Featured roles</p>
-                    <h2>Latest openings for you</h2>
-                </div>
-                <a class="link" href="#">See all</a>
-            </div>
-            <div class="job-grid">
-                <article class="job-card">
-                    <div class="job-top">
-                        <div class="avatar">AC</div>
-                        <div>
-                            <h3>Associate Consultant</h3>
-                            <p class="company">Acme Corp • Remote</p>
-                        </div>
-                    </div>
-                    <p class="meta">₹8-12 LPA • Full time</p>
-                    <p class="desc">Work with product teams to solve customer problems and ship meaningful features.</p>
-                    <div class="labels">
-                        <span>Consulting</span>
-                        <span>Client Facing</span>
-                    </div>
-                    <button class="ghost">View details</button>
-                </article>
+  <div class="auth-buttons">
+    <button class="ghost">Login</button>
+    <button class="solid">Sign Up</button>
+  </div>
+</header>
 
-                <article class="job-card">
-                    <div class="job-top">
-                        <div class="avatar">DS</div>
-                        <div>
-                            <h3>Data Scientist</h3>
-                            <p class="company">DataSpring • Pune</p>
-                        </div>
-                    </div>
-                    <p class="meta">₹15-22 LPA • Hybrid</p>
-                    <p class="desc">Own models that power growth experiments and help teams understand user behavior.
-                    </p>
-                    <div class="labels">
-                        <span>Python</span>
-                        <span>ML</span>
-                    </div>
-                    <button class="ghost">View details</button>
-                </article>
+<section class="hero">
+  <h1>Find a job that fits your life.</h1>
+  <p>Browse opportunities from trusted companies.</p>
 
-                <article class="job-card">
-                    <div class="job-top">
-                        <div class="avatar">UX</div>
-                        <div>
-                            <h3>UX Designer</h3>
-                            <p class="company">Pixel Studio • Gurgaon</p>
-                        </div>
-                    </div>
-                    <p class="meta">₹10-14 LPA • Onsite</p>
-                    <p class="desc">Design simple flows, run quick tests, and ship UI that feels lightweight.</p>
-                    <div class="labels">
-                        <span>Figma</span>
-                        <span>Wireframes</span>
-                    </div>
-                    <button class="ghost">View details</button>
-                </article>
-            </div>
-        </section>
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search by title or company">
+    <button id="sortBtn">Sort by Salary ↓</button>
+  </div>
 
-        <section class="categories" id="categories">
-            <div class="section-head">
-                <div>
-                    <p class="pill">Browse</p>
-                    <h2>Popular categories</h2>
-                </div>
-            </div>
-            <div class="chip-list">
-                <span>Product</span>
-                <span>Engineering</span>
-                <span>Marketing</span>
-                <span>Sales</span>
-                <span>Operations</span>
-                <span>HR</span>
-                <span>Finance</span>
-                <span>Support</span>
-            </div>
-        </section>
+  <div class="quick-stats">
+    <span id="totalJobs">0 Jobs</span>
+    <span>Verified Companies</span>
+    <span>Remote Friendly</span>
+  </div>
+</section>
 
-        <section class="cta">
-            <div>
-                <h2>Get noticed faster.</h2>
-                <p>Complete your profile and let recruiters find you. Keep it simple and honest.</p>
-            </div>
-            <button class="solid">Create profile</button>
-        </section>
-    </main>
+<section class="admin-section">
+  <h2 id="formTitle">Post a New Job</h2>
 
-    <footer class="footer">
-        <div>
-            <div class="logo">JobPortal</div>
-        </div>
-        <div class="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
-        </div>
-    </footer>
+  <form id="jobForm">
+    <input type="text" id="title" placeholder="Job Title" required>
+    <input type="text" id="company" placeholder="Company Name" required>
+    <input type="text" id="location" placeholder="Location" required>
+    <input type="number" id="salary" placeholder="Salary (₹ LPA)" required>
+    <input type="text" id="experience" placeholder="Experience (e.g. 2-4 yrs)" required>
+
+    <select id="type">
+      <option value="Full Time">Full Time</option>
+      <option value="Part Time">Part Time</option>
+      <option value="Remote">Remote</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+
+    <select id="category">
+      <option value="Engineering">Engineering</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Design">Design</option>
+      <option value="HR">HR</option>
+      <option value="Sales">Sales</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="featured">
+      Mark as Featured
+    </label>
+
+    <button type="submit" id="submitBtn">Add Job</button>
+    <button type="button" id="cancelEdit" style="display:none;">Cancel</button>
+  </form>
+</section>
+
+<section class="jobs-section">
+  <div class="jobs-header">
+    <h2>Available Jobs</h2>
+    <span id="jobCount"></span>
+  </div>
+
+  <div class="job-grid" id="jobGrid"></div>
+  <p id="emptyState" style="display:none;">No jobs found.</p>
+</section>
+
+<footer>
+  <p>© 2026 JobPortal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
